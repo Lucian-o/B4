@@ -47,3 +47,23 @@ movies.sort(compareMovieIds);
 // Displays a copy of the sorted array.
 console.log("Anime movies sorted by ID:");
 console.table([...movies]);
+
+    // B4.5: Searches array one movie at a time for movieId.
+// Returns the matching movie object.
+function sequentialSearchMovies(array, movieId) {
+    // Tracks the index of the movie currently being checked.
+    for (let index = 0; index < array.length; index++) {
+        if (array[index].movieId === movieId) {
+            return array[index];
+        }
+    }
+
+    // Return null if no match exists
+    return null;
+}
+
+// Searches for an ID that exists in the array.
+console.log("Search for ID 108:", sequentialSearchMovies(movies, 108));
+
+// Searches for an ID that does not exist in the array.
+console.log("Search for ID 999:", sequentialSearchMovies(movies, 999));
