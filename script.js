@@ -34,3 +34,16 @@ const movies = [
 // Displays a copy of the array in its original order.
 console.log("Initial anime movie array:");
 console.table([...movies]);
+
+    // B4.4: Compares firstMovie and secondMovie by their movie IDs.
+// Returns their ID difference to determine ascending order.
+function compareMovieIds(firstMovie, secondMovie) {
+    return firstMovie.movieId - secondMovie.movieId;
+}
+
+// Sorts the movie array by ID from smallest to largest.
+movies.sort(compareMovieIds);
+
+// Displays a copy of the sorted array.
+console.log("Anime movies sorted by ID:");
+console.table([...movies]);
