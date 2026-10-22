@@ -16,3 +16,21 @@ class Movie {
 
 // Displays the class definition in the console.
 console.log("Movie class:", Movie);
+
+    // B4.3: Stores ten anime movies with unique IDs in an unsorted order.
+const movies = [
+    new Movie(105, "Spirited Away", 2001, 10),
+    new Movie(110, "A Silent Voice", 2016, 10),
+    new Movie(101, "Howl's Moving Castle", 2004, 8),
+    new Movie(108, "Akira", 1988, 7),
+    new Movie(103, "Castle in the Sky", 1986, 7),
+    new Movie(107, "Princess Mononoke", 1997, 8),
+    new Movie(104, "Perfect Blue", 1998, 9),
+    new Movie(109, "Your Name", 2016, 9),
+    new Movie(102, "Weathering with You", 2019, 7),
+    new Movie(106, "Garden of words", 2013, 8)
+];
+
+// Displays a copy of the array in its original order.
+console.log("Initial anime movie array:");
+console.table([...movies]);
